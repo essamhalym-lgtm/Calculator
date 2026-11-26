@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg ,#f5f7fa , #c3cfe2);
+}
+.container{
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+#age-prompt.visible , #apology.visible , #Calculator.visible{
+    display: block;
+}
+
+#age-prompt , #apology , #Calculator{
+    display: none;
+}
+h1{
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4a4a4a;
+}
+input[type="number"]{
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+button{
+    background-color: #6a1b9a;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+button:hover{
+    background-color: #cfcfcf;
+}
+#display{
+    width: 100%;
+    padding: 15px;
+    font-size: 24px;
+    text-align: right;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 10px;
+}
+.buttons button{
+    padding: 20px;
+    font-size: 18px;
+    background-color: #e0e0e0;
+    color: #333;
+    border-radius: 5px;
+}
+.buttons button.operator{
+    background-color: #6a1b9a;
+    color: #fff;
+}
+.buttons button.operator:hover{
+    background-color: #4a148c;
+}
+
+.buttons button.equal{
+    background-color: #388e3c;
+    color: #fff;
+}
+.buttons button.clear{
+    background-color: red;
+    color:#fff;
+    grid-column: span 2; 
+}
+.buttons button.delete{
+    background-color: red;
+    color: #fff;
+    grid-column: span 2;
+}
+#apology p{
+    color: red;
+    font-size: 18px;
+}
